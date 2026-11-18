@@ -1,4 +1,10 @@
-# Clash Chess
+# Chess Battle Arena
+
+![Logo](dist/favicon.svg)
+
+## 🎮 [CHƠI NGAY TRÊN WEB](https://nguyenminhdat6401.github.io/chessbattle2d/dist/)
+
+Không cần cài đặt — mở link và chơi trực tiếp trong trình duyệt.
 
 Game cờ vua 2D kết hợp đấu đối kháng, dành cho trình duyệt máy tính và màn hình cảm ứng. Không cần cài thư viện.
 
