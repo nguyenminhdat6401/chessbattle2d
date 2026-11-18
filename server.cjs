@@ -1,0 +1,3 @@
+const http=require('node:http'),fs=require('node:fs'),path=require('node:path');
+const root=path.join(__dirname,'dist');
+http.createServer((req,res)=>{const file=path.join(root,decodeURIComponent(req.url.split('?')[0])==='/'?'index.html':decodeURIComponent(req.url.split('?')[0]));if(!file.startsWith(root+path.sep)){res.writeHead(403);return res.end();}fs.readFile(file,(err,data)=>{res.writeHead(err?404:200,{'Content-Type':({'html':'text/html; charset=utf-8','css':'text/css','js':'text/javascript'})[path.extname(file).slice(1)]||'application/octet-stream'});res.end(err?'Not found':data);});}).listen(3000,'127.0.0.1',()=>console.log('Clash Chess: http://localhost:3000'));
